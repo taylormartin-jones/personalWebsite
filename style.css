@@ -1,0 +1,257 @@
+body {
+    font-family: TaylorsHandwriting;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    color: black;
+    background-color: rgb(235, 235, 235);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 2rem;
+    
+}
+
+.skills-grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-img {
+    img {
+        width: 250px;
+        border-radius: 50%;
+        /*min-width: 30%; 
+        max-width: 20%; */
+        display:inline-block;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        height: auto; 
+    }
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 0;
+    flex-direction: column;
+    
+    /*position: static;
+    bottom: 2rem;
+    left: 2rem;
+    align-items: flex-start;
+    font-size: 0;
+    justify-content: flex-start; */
+    img { 
+        /*display: block;
+        height: auto; */
+        width: 7rem;
+        transition: transform 0.3s ease, filter 0.3s ease; 
+    }
+    /*a {
+        display: inline-block;
+    }*/
+    img:hover {
+        transform: scale(1.15);
+    } 
+}
+.home-content {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    
+
+/*https://www.youtube.com/shorts/fTOcWMD_5pk*/
+    .typing-text {
+        display: inline-block;
+        font-size: 1.8rem;
+        overflow: hidden;
+
+        margin-top: 0;
+
+        white-space: nowrap;
+        border-right: 1px solid;
+
+        animation: typing 3s steps(25, end) forwards,
+        blink 1s step-end infinite;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 32ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+
+    }
+}
+
+
+#hero {
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    padding: 10rem 2rem 1rem;
+    padding-top: 70px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    color: #000;
+}
+
+#skills {
+    background-position: center;
+    background-size: cover;
+    padding: 2rem 1rem;
+    background-color: #a7c9e6;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    color: #000;
+    position: relative;
+}
+
+nav ul{
+    padding: 2rem;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    list-style: none;   
+    img {
+        width: 5%;
+    }
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: black;
+    text-decoration-line: none;
+    margin-left: 4rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+
+}
+
+nav a:hover,
+nav a.active {
+    color: #b99dda;
+    border-bottom: 3px solid 
+}
+
+.logo {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #b99dda;
+    border: none;
+    border-radius: 20px;
+    font-family: TaylorsHandwriting;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    /*transform: scale(1.02);
+    background-color: #a98ec7; */
+    background-color: transparent;
+    color: #a98ec7;
+    border: 2px solid #a98ec7;
+    outline: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 20px;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: rgb(235, 235, 235);
+    filter: drop-shadow(10px);
+}
+
+footer {
+    background-color:  rgb(235, 235, 235);
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.4rem;
+    font-family: TaylorsHandwriting;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-content .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.footer-content .social-icons img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-content .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* From the website *insert url* */
+@font-face {
+    font-family: 'TaylorsHandwriting';
+    src: url('Fonts/Taylorshandwriting-Regular.eot'); /* IE9 Compat Modes */
+    src: url('Fonts/Taylorshandwriting-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('Fonts/Taylorshandwriting-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('Fonts/Taylorshandwriting-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+        url('Fonts/Taylorshandwriting-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('Fonts/Taylorshandwriting-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 400;
+    font-style: normal;
+}
